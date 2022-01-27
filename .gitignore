@@ -1,0 +1,9 @@
+/build
+/target/
+.classpath
+.project
+/.settings/**
+.idea
+.prefs
+.vscode
+/mars-sim.iml
