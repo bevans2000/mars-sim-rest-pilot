@@ -3,20 +3,25 @@ package org.mars_sim.rest.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A mocked up Simulation to emulate the Simulation engine
+ */
 public class Simulation {
     private final static String SETTLEMENT_TYPE = "settlement";
     private final static String PERSON_TYPE = "person";
 
-
     private List<Person> persons;
     private List<Settlement> settlements;
 
+    /**
+     * Creates a static object model
+     */
     public Simulation() {
         ReportingAuthority ra1 = new ReportingAuthority("NASA", "Find life");
         ReportingAuthority ra2 = new ReportingAuthority("RKA", "Explore Space");
 
-        Settlement s1 = new Settlement("New Boston", SETTLEMENT_TYPE, 0);
-        Settlement s2 = new Settlement("New Moscow", SETTLEMENT_TYPE, 1);
+        Settlement s1 = new Settlement("New Boston", SETTLEMENT_TYPE, 0, ra1, 1.2D, 100.2D, 12343.6D, 76559.22D, 985.1D);
+        Settlement s2 = new Settlement("New Moscow", SETTLEMENT_TYPE, 1, ra2, 4545.1D, 343.5D, 0, 3434.0D, 9785.1D);
         settlements = new ArrayList<>();
         settlements.add(s1);
         settlements.add(s2);
@@ -34,4 +39,7 @@ public class Simulation {
         return persons;
     }
 
+    public List<Settlement> getSettlements() {
+        return settlements;
+    }
 }

@@ -3,6 +3,9 @@ package org.mars_sim.rest.dto;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Summary of a Person commonly used in tables
+ */
 public class PersonSummaryDTO extends UnitReferenceDTO {
    @Getter @Setter private String job; 
    @Getter @Setter private String role; 

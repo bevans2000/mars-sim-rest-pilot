@@ -3,9 +3,9 @@ package org.mars_sim.rest.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.mars_sim.rest.dto.PersonDTO;
-import org.mars_sim.rest.dto.PersonSummaryDTO;
-import org.mars_sim.rest.model.Person;
+import org.mars_sim.rest.dto.SettlementDTO;
+import org.mars_sim.rest.dto.SettlementSummaryDTO;
+import org.mars_sim.rest.model.Settlement;
 import org.mars_sim.rest.model.Simulation;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/settlement")
+public class SettlementController {
 
     @Autowired
     private Simulation sim;
@@ -25,13 +25,13 @@ public class PersonController {
     private ModelMapper mapper;
 
     @GetMapping("")
-    List<PersonSummaryDTO> getPersons() {
-        return sim.getPersons().stream().map(s -> mapper.map(s, PersonSummaryDTO.class)).collect(Collectors.toList());
+    List<SettlementSummaryDTO> getSettlements() {
+        return sim.getSettlements().stream().map(s -> mapper.map(s, SettlementSummaryDTO.class)).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
-    public PersonDTO getPerson(@PathVariable int id) {
-        Person s = sim.getPersons().get(id);
-        return mapper.map(s, PersonDTO.class);
+    public SettlementDTO getSettlement(@PathVariable int id) {
+        Settlement s = sim.getSettlements().get(id);
+        return mapper.map(s, SettlementDTO.class);
     }
 }
