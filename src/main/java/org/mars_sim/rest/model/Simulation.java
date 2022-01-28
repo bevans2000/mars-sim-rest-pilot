@@ -32,7 +32,9 @@ public class Simulation {
         persons.add(new Person("Alex Turner", PERSON_TYPE, 1, "Engineer", "Head of Maintenance", "Male", "Garage",
                                 "Weak", "Poor", "Resting", ra2, s2));
         persons.add(new Person("Wendy Ford", PERSON_TYPE, 2, "Scientist", "Commander", "Female", "Lab",
-        "Good", "Good", "Reading", ra2, s1));
+                                "Good", "Good", "Reading", ra2, s1));
+        persons.add(new Person("Karen Wilson", PERSON_TYPE, 3, "Pilot", "Mission Specialist", "Female", "Lab",
+                                "Good", "Good", "Repairing Vehicle", ra2, s1));
     }
 
     public List<Person> getPersons() {

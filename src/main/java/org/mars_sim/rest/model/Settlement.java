@@ -8,7 +8,7 @@ public class Settlement implements Unit {
 
     @Getter private String name; 
     @Getter private String type; 
-    @Getter private int identifer; 
+    @Getter private int identifier; 
     @Getter ReportingAuthority authority;
     @Getter private double power;
     @Getter private double oxygen;

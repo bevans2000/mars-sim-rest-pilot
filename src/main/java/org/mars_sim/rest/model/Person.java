@@ -7,7 +7,7 @@ import lombok.Getter;
 public class Person implements Unit {
     @Getter private String name; 
     @Getter private String type; 
-    @Getter private int identifer; 
+    @Getter private int identifier; 
     @Getter private String job; 
     @Getter private String role; 
     @Getter private String gender; 
