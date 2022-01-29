@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor
-public class Person implements Unit {
+public class Person implements Referencable {
     @Getter private String name; 
     @Getter private String type; 
     @Getter private int identifier; 

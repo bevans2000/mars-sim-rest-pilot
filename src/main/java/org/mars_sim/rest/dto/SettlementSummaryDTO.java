@@ -6,7 +6,7 @@ import lombok.Setter;
 /**
  * Summary of a Settlement commonly used in tables
  */
-public class SettlementSummaryDTO extends UnitReferenceDTO {
+public class SettlementSummaryDTO extends ReferencableDTO {
     @Getter @Setter private double power;
     @Getter @Setter private double oxygen;
     @Getter @Setter private double hydrogen;

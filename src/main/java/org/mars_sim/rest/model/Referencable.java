@@ -1,6 +1,9 @@
 package org.mars_sim.rest.model;
 
-public interface Unit {
+/**
+ * Represents an entity that can be accessed via the RestAPI.
+ */
+public interface Referencable {
     String getName();
     String getType();
     int getIdentifier();

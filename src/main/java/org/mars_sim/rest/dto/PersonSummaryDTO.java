@@ -6,7 +6,7 @@ import lombok.Setter;
 /**
  * Summary of a Person commonly used in tables
  */
-public class PersonSummaryDTO extends UnitReferenceDTO {
+public class PersonSummaryDTO extends ReferencableDTO {
    @Getter @Setter private String job; 
    @Getter @Setter private String role; 
    @Getter @Setter private String gender; 
