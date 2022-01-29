@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+:root {
+  --mars-mid: #d62e108e;
+  --mars-fg: #ff0800;
+  --mars-bg: #ecc5c5fb;
+}
+
+
+.mars-navbar {
+  margin-left: 10px;
+  background: var(--mars-bg);
+}
+
+#mars-nav-brand{
+  color: var(--mars-fg);
+  font-size: 25px;
+}
+
+.unit-link {
+  color: var(--mars-mid);
+  padding: 5px;
+}
+.unit-link:hover {
+  color: var(--mars-fg);
+}
+.content {
+  /*max-width: 600px;*/
+  margin: 10px;
+}
+
+.error {
+  color: red;
+}
+
+/* Unit table */
+.unit-table {
+  border: 2px solid var(--mars-mid);
+  border-collapse: collapse;
+  padding: 5px;
+}
+.unit-table th {
+  color: var(--mars-fg);
+}
+.unit-table td {
+  border: 1px solid var(--mars-mid);
+}
+
+/* All Unit details pages */
+/*
+.unit-details div {
+  margin: 20px 0;
+}
+*/
+.detail-heading {
+  font-size: 20px;
+  color: var(--mars-fg);
+  margin-bottom: 10px;
+}
+.detail-panel label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+

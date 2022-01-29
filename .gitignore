@@ -1,5 +1,7 @@
-/build
-/target/
+build/
+target/
+node
+node_modules
 .classpath
 .project
 /.settings/**
