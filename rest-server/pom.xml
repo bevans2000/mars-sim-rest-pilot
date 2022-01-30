@@ -10,12 +10,14 @@
 	<artifactId>rest-server</artifactId>
 	<name>Mars Sim Rest pilot</name>
 	<description>Demo project for Spring Boot</description>
+	<packaging>jar</packaging>
 	<properties>
 		<java.version>11</java.version>
 		<maven.compiler.release>11</maven.compiler.release>
         <modelmapper.version>3.0.0</modelmapper.version>
 		<openapi.version>1.6.4</openapi.version>
 		<springboot.version>2.6.3</springboot.version>
+		<mainClass>org.mars_sim.rest.App</mainClass>	
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -78,6 +80,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${springboot.version}</version>
 				<configuration>
 					<excludes>
 						<exclude>
@@ -85,6 +88,13 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<executions>
+						<execution>
+							<configuration>
+								<mainClass>${mainClass}</mainClass>
+							</configuration>
+						</execution>
+					</executions>
 				</configuration>
 			</plugin>
 			<plugin>
