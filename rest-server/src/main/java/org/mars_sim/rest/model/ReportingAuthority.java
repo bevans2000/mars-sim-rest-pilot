@@ -1,10 +1,16 @@
 package org.mars_sim.rest.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor
+@Getter
 public class ReportingAuthority {
-    @Getter private String name; 
-    @Getter private String objective; 
+    private String name; 
+    private String objective; 
+    private List<String> agenda = new ArrayList<>();
+    
 }

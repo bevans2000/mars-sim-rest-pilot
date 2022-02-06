@@ -1,11 +1,11 @@
 
 import { useTable } from "react-table";
-import useLoadData from "./useLoadData";
+import useLoadData from "../useLoadData";
 
-const UnitTable = (props) => {
+const EntityTable = (props) => {
 
-    const {unitType, columns} = props;
-    const { data, error } = useLoadData(unitType, []);
+    const {entityType, columns} = props;
+    const { data, error } = useLoadData(entityType, []);
     
       const {
         getTableProps,
@@ -57,5 +57,5 @@ const UnitTable = (props) => {
       )
 };
 
-export default UnitTable;
+export default EntityTable;
 

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import UnitTable from "./UnitTable";
-import { UnitCell } from "./LinkUtils";
+import EntityTable from "../common/EntityTable";
+import { EntityCell } from "../common/LinkUtils";
 
 const SettlementTable = () => {
 
@@ -9,7 +9,7 @@ const SettlementTable = () => {
           {
             Header: 'Name',
             accessor: 'name',
-            Cell: UnitCell
+            Cell: EntityCell
           },
           {
             Header: 'Power',
@@ -36,7 +36,7 @@ const SettlementTable = () => {
       )
 
     return (
-        <UnitTable unitType="settlement" columns={columns} />
+        <EntityTable entityType="settlement" columns={columns} />
       );
 };
 

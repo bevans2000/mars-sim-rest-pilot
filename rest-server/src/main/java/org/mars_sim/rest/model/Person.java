@@ -12,8 +12,7 @@ public class Person implements Referencable {
     @Getter private String role; 
     @Getter private String gender; 
     @Getter private String building; 
-    @Getter private String health; 
-    @Getter private String performance;
+    @Getter private PhysicalCondition condition; 
     @Getter private String task;
     @Getter private ReportingAuthority authority;
     @Getter private Settlement settlement; 

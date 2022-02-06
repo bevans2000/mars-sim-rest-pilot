@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
-import { DETAIL_HEADING, DETAIL_PANEL } from "./LinkUtils";
-import useLoadData from "./useLoadData"; 
+import { DETAIL_HEADING, DETAIL_PANEL } from "../common/LinkUtils";
+import ReportingAuthority from "../common/ReportingAuthority";
+import useLoadData from "../useLoadData"; 
 
 const SettlementDetails = () => {
   const { id } = useParams();
@@ -16,6 +17,7 @@ const SettlementDetails = () => {
           <p><label>Reporting Authority:</label>{ settlement.authority.name }</p>
           <p><label>Power:</label>{ settlement.power } Kw</p>
           <p><label>Citizens:</label>{ settlement.persons }</p>
+          <ReportingAuthority authority={settlement.authority} />
         </article>
       )}
     </div>

@@ -6,12 +6,14 @@ import lombok.Setter;
 /**
  * Summary of a Person commonly used in tables
  */
+@Getter @Setter
 public class PersonSummaryDTO extends ReferencableDTO {
-   @Getter @Setter private String job; 
-   @Getter @Setter private String role; 
-   @Getter @Setter private String gender; 
-   @Getter @Setter private String building; 
-   @Getter @Setter private String health; 
-   @Getter @Setter private String performance;
-   @Getter @Setter private String task;  
+   private String job; 
+   private String role; 
+   private String gender; 
+   private String building; 
+   private String conditionHealth; 
+   private float conditionPerformance;
+   private float conditionEnergy;
+   private String task;  
 }

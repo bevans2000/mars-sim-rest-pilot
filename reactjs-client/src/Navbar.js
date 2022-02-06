@@ -9,8 +9,8 @@ const SimNavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavItem>   <Link className="unit-link" to="/persons">Persons</Link> </NavItem> 
-            <NavItem>   <Link className="unit-link"   to="/settlements">Settlements</Link> </NavItem>
+            <NavItem>   <Link className="entity-link" to="/persons">Persons</Link> </NavItem> 
+            <NavItem>   <Link className="entity-link"   to="/settlements">Settlements</Link> </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Container>

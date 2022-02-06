@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { UnitCell } from "./LinkUtils";
-import UnitTable from "./UnitTable";
+import { EntityCell } from "../common/LinkUtils";
+import EntityTable from "../common/EntityTable";
 
 // A Unit table showing all Persons
 const PersonTable = () => {
@@ -10,7 +10,7 @@ const PersonTable = () => {
           {
             Header: 'Name',
             accessor: 'name',
-            Cell: UnitCell
+            Cell: EntityCell
           },
           {
             Header: 'Job',
@@ -30,18 +30,18 @@ const PersonTable = () => {
           },
           {
             Header: 'Health',
-            accessor: 'health',
+            accessor: 'conditionHealth',
           },
           {
             Header: 'Performance',
-            accessor: 'performance',
+            accessor: 'conditionPerformance',
           },
         ],
         []
       )
     
       return (
-        <UnitTable unitType="person" columns={columns} />
+        <EntityTable entityType="person" columns={columns} />
       )
 };
 

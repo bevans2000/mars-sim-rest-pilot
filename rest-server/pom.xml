@@ -9,7 +9,7 @@
     </parent>
 	<artifactId>rest-server</artifactId>
 	<name>Mars Sim Rest pilot</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Resetful server emulating a Mars sim engine</description>
 	<packaging>jar</packaging>
 	<properties>
 		<java.version>11</java.version>

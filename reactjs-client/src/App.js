@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-import PersonDetails from './PersonDetails';
 import NotFound from './NotFound';
-import PersonTable from './PersonTable';
-import SettlementDetails from './SettlementDetails';
-import SettlementTable from './SettlementTable';
-import SimNavBar from './Navbar';
+import PersonTable from './person/PersonTable';
+import PersonDetails from './person/PersonDetails'
+import SettlementDetails from './settlement/SettlementDetails';
+import SettlementTable from './settlement/SettlementTable';
+import SimNavBar from './Navbar'; 
 
 function App() {
   return (

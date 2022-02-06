@@ -1,7 +1,9 @@
 import { Accordion } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { UnitLink, DETAIL_PANEL, DETAIL_HEADING} from "./LinkUtils";
-import useLoadData from "./useLoadData"; 
+import { EntityLink, DETAIL_PANEL, DETAIL_HEADING} from "../common/LinkUtils";
+import useLoadData from "../useLoadData"; 
+import PersonHealth from "./PersonHealth";
+import ReportingAuthority from "../common/ReportingAuthority";
 
 const PersonDetails = () => {
   const { id } = useParams();
@@ -21,7 +23,7 @@ const PersonDetails = () => {
             <Accordion.Body>
               <p><label>Gender:</label>{ person.gender }</p>
               <p><label>Building:</label>{ person.building }</p>
-              <p><label>Settlement:</label><UnitLink reference={person.settlement} /> </p>
+              <p><label>Settlement:</label><EntityLink reference={person.settlement} /> </p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
@@ -33,9 +35,15 @@ const PersonDetails = () => {
           <Accordion.Item eventKey="2">
             <Accordion.Header>Authority {person.authority.name}</Accordion.Header>
             <Accordion.Body>
-              <p><label>Objective:</label>{ person.authority.objective }</p>
+              <ReportingAuthority authority={person.authority} />
             </Accordion.Body>
-          </Accordion.Item>          
+          </Accordion.Item>  
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>Health</Accordion.Header>
+            <Accordion.Body>
+              <PersonHealth data={person} />
+            </Accordion.Body>
+          </Accordion.Item>         
         </Accordion>
         </div>
       )}

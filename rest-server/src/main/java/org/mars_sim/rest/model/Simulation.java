@@ -17,8 +17,8 @@ public class Simulation {
      * Creates a static object model
      */
     public Simulation() {
-        ReportingAuthority ra1 = new ReportingAuthority("NASA", "Find life");
-        ReportingAuthority ra2 = new ReportingAuthority("RKA", "Explore Space");
+        ReportingAuthority ra1 = new ReportingAuthority("NASA", "Find life", List.of("Agenda 1"));
+        ReportingAuthority ra2 = new ReportingAuthority("RKA", "Explore Space", List.of("Agenda 1", "Agenda 2"));
 
         Settlement s1 = new Settlement("New Boston", SETTLEMENT_TYPE, 0, ra1, 1.2D, 100.2D, 12343.6D, 76559.22D, 985.1D);
         Settlement s2 = new Settlement("New Moscow", SETTLEMENT_TYPE, 1, ra2, 4545.1D, 343.5D, 0, 3434.0D, 9785.1D);
@@ -27,14 +27,18 @@ public class Simulation {
         settlements.add(s2);
 
         persons = new ArrayList<>();
+        PhysicalCondition condition1 = new PhysicalCondition(1F, "Well", 123.45F);
         persons.add(new Person("Fred Smith", PERSON_TYPE, 0, "Chef", "Head of Agriculture", "Male", "Lander Hab 1",
-                                "Good", "Good", "Cooking", ra1, s1));
+                                condition1, "Cooking", ra1, s1));
+        PhysicalCondition condition2 = new PhysicalCondition(0.8F, "OK", 5645645.34F);
         persons.add(new Person("Alex Turner", PERSON_TYPE, 1, "Engineer", "Head of Maintenance", "Male", "Garage",
-                                "Weak", "Poor", "Resting", ra2, s2));
+                                condition2, "Resting", ra2, s2));
+        PhysicalCondition condition3 = new PhysicalCondition(0.1F, "Poor", 48937.1F);
         persons.add(new Person("Wendy Ford", PERSON_TYPE, 2, "Scientist", "Commander", "Female", "Lab",
-                                "Good", "Good", "Reading", ra2, s1));
+                                condition3, "Reading", ra2, s1));
+        PhysicalCondition condition4 = new PhysicalCondition(0.5F, "OK", 456565.4F);
         persons.add(new Person("Karen Wilson", PERSON_TYPE, 3, "Pilot", "Mission Specialist", "Female", "Lab",
-                                "Good", "Good", "Repairing Vehicle", ra2, s1));
+                                condition4, "Repairing Vehicle", ra2, s1));
     }
 
     public List<Person> getPersons() {

@@ -24,11 +24,11 @@
   font-size: 25px;
 }
 
-.unit-link {
+.entity-link {
   color: var(--mars-mid);
   padding: 5px;
 }
-.unit-link:hover {
+.entity-link:hover {
   color: var(--mars-fg);
 }
 .content {
@@ -40,25 +40,20 @@
   color: red;
 }
 
-/* Unit table */
-.unit-table {
+/* Entity table */
+.entity-table {
   border: 2px solid var(--mars-mid);
   border-collapse: collapse;
   padding: 5px;
 }
-.unit-table th {
+.entity-table th {
   color: var(--mars-fg);
 }
-.unit-table td {
+.entity-table td {
   border: 1px solid var(--mars-mid);
 }
 
 /* All Unit details pages */
-/*
-.unit-details div {
-  margin: 20px 0;
-}
-*/
 .detail-heading {
   font-size: 20px;
   color: var(--mars-fg);
