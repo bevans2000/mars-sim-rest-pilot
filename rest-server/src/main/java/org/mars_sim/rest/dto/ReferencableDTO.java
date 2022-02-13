@@ -6,8 +6,9 @@ import lombok.Setter;
 /**
  * Defines the JSON representation for a Reference to an entity
  */
+@Getter @Setter
 public class ReferencableDTO {
-    @Getter @Setter private String name; 
-    @Getter @Setter private String type; 
-    @Getter @Setter private int identifier; 
+    private String name; 
+    private String type; 
+    private int identifier; 
 }

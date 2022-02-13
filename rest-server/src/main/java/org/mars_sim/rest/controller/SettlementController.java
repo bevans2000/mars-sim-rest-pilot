@@ -31,7 +31,7 @@ public class SettlementController {
 
     @GetMapping("/{id}")
     public SettlementDTO getSettlement(@PathVariable int id) {
-        Settlement s = sim.getSettlements().get(id);
+        Settlement s = sim.getSettlements().get(id-1);
         return mapper.map(s, SettlementDTO.class);
     }
 }

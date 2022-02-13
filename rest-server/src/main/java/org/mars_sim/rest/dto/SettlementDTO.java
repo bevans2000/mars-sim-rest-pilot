@@ -6,7 +6,8 @@ import lombok.Setter;
 /**
  * Detailed representation of a Settlement
  */
+@Getter @Setter
 public class SettlementDTO extends SettlementSummaryDTO {
-    @Getter @Setter private ReportingAuthorityDTO authority;
-    @Getter @Setter private int citizens;
+    private ReportingAuthorityDTO authority;
+    private int citizens;
 }
