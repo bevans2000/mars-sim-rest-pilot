@@ -1,7 +1,6 @@
 package org.mars_sim.rest;
 
 import org.mars_sim.rest.model.Simulation;
-import org.modelmapper.ModelMapper;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,11 +16,5 @@ public class App {
     public Simulation getSimulation(ApplicationArguments args) {
         System.out.println("Commandline args = " + args);
         return new Simulation();
-    }
-
-    @Bean
-    public ModelMapper getModelMapper() {
-        ModelMapper mapper = new ModelMapper();
-        return mapper;
     }
 }

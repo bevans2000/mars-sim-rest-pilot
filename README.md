@@ -1,12 +1,12 @@
 # Mars Sim REST Pilot
 
-This project is a simple SpringBoot RestAPI server to prototype an API for the mars-sim project to support a REactJS client.
+This project is a simple SpringBoot RestAPI server to prototype an API for the mars-sim project to support a ReactJS client.
 
 ## Projects
 There are 2 sub-projects:
 
 ### Rest-server
-A Spring boot Java app that provides a RestAPI of entities. It uses the [ModelMapper](http://modelmapper.org/) to automatically provide the mapping code from the model objects to the various DTO equivalents. There is a _model_ package that emulates the model objects of the Simulation.
+A Spring boot Java app that provides a RestAPI of entities. It uses the [MapStruct](https://mapstruct.org) to automatically generate the mapping code from the model objects to the various DTO equivalents. There is a _model_ package that emulates the model objects of the Simulation. The package _dto_ contains the DTO exposed to the client. The _mapper_ package contains the Mappers that define any custom mappings needed for the DTOs. MapStruct has a default mapping logic but it can be overridden.
 
 The Rest API is exposed under the _/api_ endpoint and follows the standard approach of entity & idenfitier as URL paths. Filters applied as request parameters.
 

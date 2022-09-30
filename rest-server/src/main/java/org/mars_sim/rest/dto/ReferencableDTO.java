@@ -1,5 +1,6 @@
 package org.mars_sim.rest.dto;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,7 +9,10 @@ import lombok.Setter;
  */
 @Getter @Setter
 public class ReferencableDTO {
+
     private String name; 
+
     private String type; 
+
     private int identifier; 
 }

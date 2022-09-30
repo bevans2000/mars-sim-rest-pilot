@@ -12,8 +12,10 @@ public class PersonSummaryDTO extends ReferencableDTO {
    private String role; 
    private String gender; 
    private String building; 
+
    private String conditionHealth; 
    private float conditionPerformance;
    private float conditionEnergy;
+   
    private String task;  
 }

@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.mapstruct.factory.Mappers;
 import org.mars_sim.rest.dto.PersonDTO;
 import org.mars_sim.rest.dto.PersonSummaryDTO;
+import org.mars_sim.rest.mapper.PersonMapper;
 import org.mars_sim.rest.model.Person;
 import org.mars_sim.rest.model.Simulation;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,8 +24,7 @@ public class PersonController {
     @Autowired
     private Simulation sim;
 
-    @Autowired
-    private ModelMapper mapper;
+    private PersonMapper mapper = Mappers.getMapper(PersonMapper.class);
 
     @GetMapping("")
     List<PersonSummaryDTO> getPersons(@RequestParam(required=false) Integer settlementId) {
@@ -35,12 +35,12 @@ public class PersonController {
         else {
             found = sim.getPersons().stream();
         }
-        return found.map(s -> mapper.map(s, PersonSummaryDTO.class)).collect(Collectors.toList());
+        return found.map(s -> mapper.toSummary(s)).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
     public PersonDTO getPerson(@PathVariable int id) {
         Person s = sim.getPersons().get(id-1);
-        return mapper.map(s, PersonDTO.class);
+        return mapper.toFull(s);
     }
 }

@@ -5,6 +5,9 @@ import lombok.Setter;
 
 @Getter @Setter 
 public class PersonDTO extends PersonSummaryDTO {
+ 
     private ReferencableDTO settlement; 
+    
+
     private ReportingAuthorityDTO authority; 
 }
